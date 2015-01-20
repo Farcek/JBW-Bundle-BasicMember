@@ -1,0 +1,41 @@
+{% extends "/layout"%}
+
+{%block masterBody%}
+<div class="container" ng-app="app" ng-controller="loginCtrl">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            {{result| beanForm | raw}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <div class="forget-password">
+                <h4>Forgot your password ?</h4>
+                <p>
+                    no worries, click
+                    <a href="javascript:;" id="forget-password">
+                        here
+                    </a>
+                    to reset your password.
+                </p>
+            </div>
+            <div class="create-account">
+                <p>
+                    Don't have an account yet ?&nbsp;
+                    <a href="javascript:;" id="register-btn">
+                        Create an account
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script >
+    var app = angular.module('app', []);
+    app.controller('loginCtrl', function ($scope) {
+
+    });
+</script>
+{%endblock%}
